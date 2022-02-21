@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3.5rem;
+  width: 100vw;
+  background: green;
+  display: flex;
+  justify-content: space-between;
+}
+
+.shopName {
+  color: white;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.nav__list {
+  list-style: none;
+}
+
+.nav__list--link {
+  display: inline-block;
+  margin-left: 1rem;
+  text-transform: uppercase;
+  transition: all 0.1s;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+
+.nav__link {
+  color: white;
+}
+
+.nav__list--link:hover {
+  box-shadow: 0 1.5rem 3rem grey;
+  transform: translateY(-0.3rem);
+}
+
+.title {
+  color: transparent;
+  background: linear-gradient(to right, lightgreen, green);
+  -webkit-background-clip: text;
+  font-size: 1.6rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  /*display: inline-block;*/
+  margin-top: 6rem;
+  text-align: center;
+}
+/* clearfix to prevent collapse of height on the parent element of floated elements*/
+
+.row::after {
+  content: "";
+  visibility: hidden;
+  display: table;
+  height: 0;
+  clear: both;
+}
+
+[class^="col-"] {
+  float: left;
+  height: 35rem;
+}
+
+[class^="col-"]:not(:last-child) {
+  margin-right: 6rem;
+}
+
+.col-1-of-3 {
+  width: calc((100% - (2 * 6rem)) / 3);
+}
+
+.card {
+  position: relative;
+  margin-top: 2rem;
+  background: #eee;
+}
+
+.crust-1 {
+  display: block;
+  margin: 1rem auto;
+  height: 7.5rem;
+  border-radius: 50%;
+}
+
+.order {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  background: white;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  border-radius: 2.5rem;
+  width: 15rem;
+  height: 3rem;
+  padding: 0.8rem;
+  padding-left: 1.1rem;
+}
+
+.order__link {
+  color: green;
+}
+
+.crust__features {
+  font-size: 1.6rem;
+  font-weight: 900;
+  margin-top: 8rem;
+}
+
+.feature {
+  display: block;
+  margin-bottom: 1.2rem;
+  border-bottom: 1px solid gray;
+  text-align: center;
+}
